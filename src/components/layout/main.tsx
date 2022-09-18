@@ -1,11 +1,20 @@
-import Header from './Header/header';
+import Header from './header/Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from '../../views/LoginPage/LoginPage';
+import Product from '../../views/Products/Product';
 
 function Main() {
 
 	return (
-		<div>
+		<div className='container mx-auto'>
 			<Header />
-			<h5>Test3423423</h5>
+			<main>
+      	<Routes>
+					<Route path="/" element={<Product />} />
+					<Route path="/product" element={<Product />} />
+        	<Route path="/login" element={<LoginPage />} />
+				</Routes>
+      </main>								
 		</div>
 	);
 }
